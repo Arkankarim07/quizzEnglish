@@ -30,8 +30,8 @@ export default function Question() {
 
   const navigation = useRouter()
   const fetchLength = async () => {
-    // const response = await axios.get(`https://quizz-backend-nine.vercel.app/api/quiz/length`)
-    const response = await axios.get(`http://192.168.100.108:5000/api/quiz/length`)
+    const response = await axios.get(`https://quizz-backend-nine.vercel.app/api/quiz/length`)
+    // const response = await axios.get(`http://192.168.100.108:5000/api/quiz/length`)
     setLength(response.data)
   }
 
@@ -46,8 +46,8 @@ export default function Question() {
   })
   useEffect(() => {
     const fetchData = async () => {
-      // const response = await axios.get(`https://quizz-backend-nine.vercel.app/api/quiz/${currentQuestion}`)
-      const response = await axios.get(`http://192.168.100.108:5000/api/quiz/${currentQuestion}`)
+      const response = await axios.get(`https://quizz-backend-nine.vercel.app/api/quiz/${currentQuestion}`)
+      // const response = await axios.get(`http://192.168.100.108:5000/api/quiz/${currentQuestion}`)
       console.log(response.data)
       setData(response.data)
       // Load previous answer if exists
